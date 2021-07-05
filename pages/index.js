@@ -4,7 +4,7 @@ import AppContainer from "../components/AppContainer";
 import WhoAreWe from "../modules/WhoAreWe";
 import Services from "../modules/Services";
 import RealMVP from "../modules/RealMVP";
-import NavBar from "../modules/NavBar";
+import Nav from "../modules/Nav";
 import AboutUs from "../modules/AboutUs";
 import Portfolio from "./Portfolio";
 import WhyUs from "../modules/WhyUs";
@@ -17,7 +17,7 @@ const Index = () => {
   return (
     <AppContainer>
       <title>Blazity - High end web and mobile software</title>
-      <NavBar />
+      <Nav />
       <Hero />
       <WhoAreWe />
       <Services />

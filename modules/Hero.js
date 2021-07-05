@@ -24,11 +24,19 @@ const Hero = () => {
               constant <b> 5-star client satisfaction</b> level
             </ThemeSubTitle>
             <div>
-              <Button backgroundColor="#e65300" textColor="white">
+              <Button
+                backgroundColor="#e65300"
+                textColor="white"
+                hoverBcgColor="#8a3200"
+              >
                 let&apos;s talk
               </Button>
-              <Button backgroundColor="yellow" textColor="#e65300">
-                our work -&gt;
+              <Button
+                backgroundColor="white"
+                textColor="#e65300"
+                hoverBcgColor="rgba(255,147,74,0.3)"
+              >
+                our work &gt;
               </Button>
             </div>
           </div>

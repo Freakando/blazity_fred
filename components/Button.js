@@ -12,11 +12,12 @@ const Button = styled.button`
   color: ${(props) => props.textColor};
   border: 0px;
   font-weight: 600;
-  font-size: 1.125rem;
+  font-size: ${(props) => props.fontSize};
   text-transform: uppercase;
 
   &:hover {
-    background-color: #8a3200;
+    background-color: ${(props) => props.hoverBcgColor};
+    transition-duration: 0.3s;
   }
 `;
 
