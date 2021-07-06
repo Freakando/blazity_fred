@@ -8,7 +8,7 @@ export const HeroSection = styled.div`
 `;
 
 export const Image = styled.img`
-  height: 100%;
+  height: 80%;
   max-height: 80vw;
   width: auto;
   position: absolute;

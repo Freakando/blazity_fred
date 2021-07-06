@@ -25,6 +25,7 @@ export const NavMenu = styled.ul`
   list-style: none;
   direction: row;
   width: 30%;
+  min-width: 400px;
 `;
 
 export const NavButtons = styled.li`
