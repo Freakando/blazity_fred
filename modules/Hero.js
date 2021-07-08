@@ -1,49 +1,103 @@
 import AppContainer from "../components/AppContainer";
-import Button from "../components/Button";
-import {
-  HeroSection,
-  Image,
-  ThemeBox,
-  ThemeTitle,
-  ThemeSubTitle,
-} from "../components/HeroSection.style";
+// import Button from "../components/Button";
+import { ThemeSubTitle } from "../components/HeroSection.style";
+import { ArrowForwardIcon } from "@chakra-ui/icons";
 import CompContainer from "../components/CompContainer";
+import {
+  Flex,
+  Stack,
+  Heading,
+  Link,
+  Button,
+  Box,
+  Image,
+} from "@chakra-ui/react";
 
 const Hero = () => {
   return (
-    <HeroSection>
-      <Image src="/rocket-bg2.svg" alt="rocket" />
+    <Flex as="section" w="100%" h="calc(100vh - 6rem)" position="relative">
+      <Image
+        src="/rocket-bg2.svg"
+        alt="Orange rocket"
+        h="80%"
+        maxHeight="80Vw"
+        w="auto"
+        position="absolute"
+        right="0px"
+        zIndex="-1"
+      />
       <CompContainer>
-        <ThemeBox>
-          <div>
-            <ThemeTitle>
-              Blazing fast webapps, no more headaches for the CMO
-            </ThemeTitle>
-            <ThemeSubTitle>
+        <Flex
+          maxWidth="35rem"
+          height="calc(100vh - 6rem)"
+          justify="left"
+          pt="5rem"
+        >
+          <Stack spacing={8} maxWidth="lg">
+            <Stack spacing={2}>
+              <Heading
+                as="h2"
+                fontWeight="700"
+                fontSize="3.75rem"
+                justify="center"
+              >
+                Blazing fast webapps, no more headaches for the CMO
+                {/* <Box as="span" whiteSpace="nowrap">
+                the C<SwitchingLetters />O
+              </Box> */}
+              </Heading>
+            </Stack>
+            <Heading
+              as="h2"
+              size="md"
+              fontSize="1.25rem"
+              fontWeight="300"
+              lineHeight={1.5}
+            >
               We work with busy tech executives, entrepreneurs and founders on a
               constant <b> 5-star client satisfaction</b> level
-            </ThemeSubTitle>
-            <div>
-              <Button
-                backgroundColor="#e65300"
-                textColor="white"
-                hoverBcgColor="#8a3200"
-              >
-                let&apos;s talk
-              </Button>
-              <Button
-                backgroundColor="white"
-                textColor="#e65300"
-                hoverBcgColor="rgba(255,147,74,0.3)"
-              >
-                our work &gt;
-              </Button>
-            </div>
-          </div>
-        </ThemeBox>
+            </Heading>
+
+            <Stack
+              // direction={{ base: "column", lg: "row" }}
+              direction="row"
+              spacing={4}
+              display={["none", "flex"]}
+            >
+              <Box>
+                <Link href="#estimate">
+                  <Button
+                    variant="solid"
+                    size="lg"
+                    textTransform="uppercase"
+                    backgroundColor="#e65300"
+                    textColor="white"
+                    hoverBcgColor="#8a3200"
+                  >
+                    let&apos;s talk
+                  </Button>
+                </Link>
+              </Box>
+              <Box>
+                <Link href="/portfolio">
+                  <Button
+                    variant="ghost"
+                    size="lg"
+                    rightIcon={<ArrowForwardIcon />}
+                    textTransform="uppercase"
+                    textColor="#e65300"
+                    hoverBcgColor="rgba(255,147,74,0.3)"
+                  >
+                    our work
+                  </Button>
+                </Link>
+              </Box>
+            </Stack>
+          </Stack>
+        </Flex>
       </CompContainer>
       <div></div>
-    </HeroSection>
+    </Flex>
   );
 };
 

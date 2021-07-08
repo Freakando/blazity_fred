@@ -1,6 +1,7 @@
 import CompContainer from "../components/CompContainer";
+import { Stack, Grid } from "@chakra-ui/react";
 import {
-  WhoWeAreSection,
+  // WhoWeAreSection,
   TitleBox,
   Title,
   TitleComment,
@@ -9,21 +10,28 @@ import {
   Reference,
 } from "../components/WhoWeAre.style";
 
-const WhoAreWe = () => {
+const WhoAreWe = (props) => {
   return (
-    <CompContainer>
-      <WhoWeAreSection>
-        <TitleBox>
-          <Title>
-            We use bleeding edge tech to build faster, more secure and
-            converting web.
-          </Title>
+    <CompContainer as="section" {...props}>
+      <Stack spacing={24}>
+        <Grid
+          templateColumns={{ base: "1fr", lg: "1fr 1fr" }}
+          columnGap={{ xl: 32, md: 16 }}
+          alignContent="center"
+          justifyItems="center"
+        >
+          <Stack>
+            <Title>
+              We use bleeding edge tech to build faster, more secure and
+              converting web.
+            </Title>
+          </Stack>
           <TitleComment>
             We work with JAMStack - modern architecture that is faster, more
             secure and more scalable compared to mainstream, monolithic
             solutions.
           </TitleComment>
-        </TitleBox>
+        </Grid>
         <TextBox>
           <Quote>
             “It is very easy to simply trust Blazity to just get the project
@@ -31,7 +39,7 @@ const WhoAreWe = () => {
           </Quote>
           <Reference>Nathan Joens, CEO, Structurely</Reference>
         </TextBox>
-      </WhoWeAreSection>
+      </Stack>
     </CompContainer>
   );
 };

@@ -1,4 +1,13 @@
 import styled from "styled-components";
+import { extendTheme } from "@chakra-ui/react";
+
+// const extendTheme = {
+//   components: {
+//     Button: {
+
+//     }
+//   }
+// }
 
 const Button = styled.button`
   min-width: 3rem;

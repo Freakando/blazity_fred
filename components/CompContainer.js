@@ -1,10 +1,18 @@
-import styled from "styled-components";
+import { Box, Flex } from "@chakra-ui/react";
 
-const CompContainer = styled.div`
-  margin: 0 10rem 0 10rem;
-  display: flex;
-  align-items: ${(props) => props.alignItems};
-  justify-content: ${(props) => props.justifyContent};
-`;
+const CompContainer = (props) => {
+  return (
+    <Flex
+      maxWidth="98em"
+      width="100%"
+      mx="auto"
+      px={8}
+      // align="${(props) => props.alignItems}"
+      // justify="${(props) => props.justifyContent};{...props}"
+    >
+      {props.children}
+    </Flex>
+  );
+};
 
 export default CompContainer;
