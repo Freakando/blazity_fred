@@ -7,8 +7,9 @@ const CompContainer = (props) => {
       width="100%"
       mx="auto"
       px={8}
+      {...props}
       // align="${(props) => props.alignItems}"
-      // justify="${(props) => props.justifyContent};{...props}"
+      // justify="${(props) => props.justifyContent};"
     >
       {props.children}
     </Flex>

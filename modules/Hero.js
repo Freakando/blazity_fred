@@ -62,7 +62,7 @@ const Hero = () => {
               // direction={{ base: "column", lg: "row" }}
               direction="row"
               spacing={4}
-              display={["none", "flex"]}
+              display="flex"
             >
               <Box>
                 <Link href="#estimate">
