@@ -4,7 +4,7 @@ import AppContainer from "../components/AppContainer";
 import WhoAreWe from "../modules/WhoAreWe";
 import Services from "../modules/Services";
 import RealMVP from "../modules/RealMVP";
-import Nav from "../modules/Nav";
+// import Nav from "../modules/Nav";
 import AboutUs from "../modules/AboutUs";
 import Portfolio from "./Portfolio";
 import WhyUs from "../modules/WhyUs";
@@ -22,7 +22,7 @@ const Index = () => {
       </Head>
       <Box as="main">
         <AppContainer>
-          <Nav />
+          {/* <Nav /> */}
           <Hero />
           <WhoAreWe />
           <Services />
