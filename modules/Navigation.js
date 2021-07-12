@@ -1,9 +1,19 @@
 import Link from "next/link";
-import { Button, Box, Link as ChakraLink, Grid, Stack } from "@chakra-ui/react";
+import {
+  Button,
+  Box,
+  Link as ChakraLink,
+  Grid,
+  Stack,
+  useColorMode,
+  useColorModeValue,
+  useDisclosure,
+} from "@chakra-ui/react";
 import CompContainer from "../components/CompContainer";
 import { HamburgerIcon } from "@chakra-ui/icons";
 import BlazityLogo from "../components/BlazityLogo";
 import ColorModeSwitcher from "../components/ColorModeSwitcher";
+import { useRouter } from "next/router";
 
 const navLinks = [
   {
@@ -29,9 +39,36 @@ const navLinks = [
 ];
 
 const Navigation = () => {
+  const { colorMode } = useColorMode();
+  const router = useRouter();
+
+  // const { isOpen, onOpen, onClose } = useDisclosure();
+  // const { setIsNavbarVisible, ctaButton } = useNavigationContext();
+
+  // const isNavbarVisible =
+  //   scrollingDirection === "up" || scrollingDirection === "none";
+
+  // useEffect(() => {
+  //   setIsNavbarVisible(isNavbarVisible);
+  // }, [isNavbarVisible, setIsNavbarVisible]);
+
+  const bgColor = useColorModeValue("white", "gray.800");
+  const textColor = useColorModeValue("gray.800", "whiteAlpha.900");
   return (
     <>
-      <Box position="sticky" top={0} zIndex={100}>
+      <Box
+        position="sticky"
+        top={0}
+        zIndex={100}
+        // visibility={isNavbarVisible ? "visible" : "hidden"}
+        // transform={{
+        //   base: isNavbarVisible ? "translateY(0)" : "translateY(-80px)",
+        //   lg: isNavbarVisible ? "translateY(0)" : "translateY(-96px)",
+        // }}
+        // transitionProperty="transform, visibility, height"
+        // transitionDuration="0.2s"
+        // transitionTimingFunction="ease-in-out"
+      >
         <Box
           as="header"
           transition="box-shadow 0.2s ease-in-out"
@@ -42,7 +79,7 @@ const Navigation = () => {
             width: "100%",
             height: "100%",
             zIndex: -1,
-            background: "white",
+            background: bgColor,
             opacity: 1,
             transition: "opacity 0.2s ease-in-out",
           }}
@@ -51,6 +88,7 @@ const Navigation = () => {
             as={Grid}
             gridTemplateColumns={{ base: "2fr auto, lg:1fr auto 1fr" }}
             alignItems="center"
+            justify="space-between" // jak to jest w blazitach?
           >
             <Box py={2}>
               <Link href="/" passHref>
@@ -85,7 +123,7 @@ const Navigation = () => {
                           borderRadius="md"
                           fontWeight={500}
                           display="block"
-                          color="black"
+                          color={textColor}
                           fontSize="md"
                           px={4}
                           py={2}
