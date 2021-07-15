@@ -132,6 +132,9 @@ const Navigation = () => {
                             bg: "initial",
                             color: "orange.500",
                           }}
+                          _focus={{
+                            boxShadow: "none",
+                          }}
                         >
                           {navLink.name}
                         </ChakraLink>
@@ -149,6 +152,13 @@ const Navigation = () => {
               display={{ base: "none", lg: "flex" }}
             >
               <Button
+                _focus={{
+                  boxShadow: "none",
+                }}
+                _active={{
+                  border: "none",
+                  borderStyle: "none",
+                }}
                 variant="solidBrand"
                 size="md"
                 textTransform="uppercase"

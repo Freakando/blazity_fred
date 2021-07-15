@@ -65,28 +65,56 @@ const Hero = () => {
               display="flex"
             >
               <Box>
-                <Link href="#estimate">
+                <Link
+                  href="#estimate"
+                  _hover={{
+                    textDecoration: "none",
+                  }}
+                >
                   <Button
+                    _focus={{
+                      boxShadow: "none",
+                    }}
                     variant="solid"
                     size="lg"
                     textTransform="uppercase"
                     backgroundColor="#e65300"
                     textColor="white"
-                    hoverBcgColor="#8a3200"
+                    _hover={{
+                      background: "#8a3200",
+                    }}
+                    _active={{
+                      border: "none",
+                      borderStyle: "none",
+                    }}
                   >
                     let&apos;s talk
                   </Button>
                 </Link>
               </Box>
               <Box>
-                <Link href="/portfolio">
+                <Link
+                  href="/portfolio"
+                  _hover={{
+                    textDecoration: "none",
+                  }}
+                >
                   <Button
+                    _focus={{
+                      boxShadow: "none",
+                    }}
                     variant="ghost"
                     size="lg"
                     rightIcon={<ArrowForwardIcon />}
                     textTransform="uppercase"
                     textColor="#e65300"
-                    hoverBcgColor="rgba(255,147,74,0.3)"
+                    _hover={{
+                      background: "rgba(255,147,74,0.3)",
+                    }}
+                    _active={{
+                      border: "none",
+                      borderStyle: "none",
+                    }}
                   >
                     our work
                   </Button>
