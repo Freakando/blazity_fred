@@ -1,9 +1,15 @@
 import React from "react";
 import { Box, Image } from "@chakra-ui/react";
 
-const Waves = () => {
+const Waves = ({ bottomWaves }) => {
   return (
-    <Box width="100%" position="relative">
+    <Box
+      width="100%"
+      position="relative"
+      transform={bottomWaves ? "rotateX(180deg)" : "none"}
+      top={bottomWaves ? "-2px" : "initial"}
+      bottom={bottomWaves ? "initial" : "-2px"}
+    >
       <Image
         alt="Orange Wave"
         aria-hidden

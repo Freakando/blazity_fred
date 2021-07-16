@@ -152,16 +152,8 @@ const Navigation = () => {
               display={{ base: "none", lg: "flex" }}
             >
               <Button
-                _focus={{
-                  boxShadow: "none",
-                }}
-                _active={{
-                  border: "none",
-                  borderStyle: "none",
-                }}
                 variant="solidBrand"
                 size="md"
-                textTransform="uppercase"
                 // onClick={() =>
                 //   (window.location.href =
                 //     ctaButton?.url || "https://blazity.com/#contact-us")

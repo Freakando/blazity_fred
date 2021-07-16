@@ -75,8 +75,8 @@ const Hero = () => {
                     _focus={{
                       boxShadow: "none",
                     }}
-                    variant="solid"
                     size="lg"
+                    variant="solid"
                     textTransform="uppercase"
                     backgroundColor="#e65300"
                     textColor="white"
@@ -100,21 +100,9 @@ const Hero = () => {
                   }}
                 >
                   <Button
-                    _focus={{
-                      boxShadow: "none",
-                    }}
-                    variant="ghost"
                     size="lg"
+                    variant="ghostBrand"
                     rightIcon={<ArrowForwardIcon />}
-                    textTransform="uppercase"
-                    textColor="#e65300"
-                    _hover={{
-                      background: "rgba(255,147,74,0.3)",
-                    }}
-                    _active={{
-                      border: "none",
-                      borderStyle: "none",
-                    }}
                   >
                     our work
                   </Button>
