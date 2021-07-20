@@ -86,20 +86,22 @@ const Navigation = () => {
         >
           <CompContainer
             as={Grid}
-            gridTemplateColumns={{ base: "2fr auto, lg:1fr auto 1fr" }}
-            alignItems="center"
-            justify="space-between" // jak to jest w blazitach?
+            gridTemplateColumns={{ base: "2fr auto", lg: "1fr auto 1fr" }}
           >
-            <Box py={2}>
+            <Box py={{ base: 4, md: 2 }}>
               <Link href="/" passHref>
                 <ChakraLink>
-                  <BlazityLogo maxWidth={40} height={16} width="auto" />
+                  <BlazityLogo
+                    maxWidth={40}
+                    height={{ base: 10, md: 14 }}
+                    width="auto"
+                  />
                 </ChakraLink>
               </Link>
             </Box>
             <Box>
               <Button variant="link" display={{ base: "unset", lg: "none" }}>
-                <HamburgerIcon height="40px" width="40px" color="grey.800" />
+                <HamburgerIcon boxSize={10} color="grey.800" />
               </Button>
               <Box as="nav" display={{ base: "none", lg: "inherit" }}>
                 <Stack

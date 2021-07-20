@@ -1,6 +1,22 @@
 import { extendTheme } from "@chakra-ui/react";
+import { mode, transparentize } from "@chakra-ui/theme-tools";
 
 const extendedTheme = {
+  styles: {
+    global: (props) => ({
+      body: {
+        fontFamily: "body",
+        color: mode("gray.800", "whiteAlpha.900")(props),
+        bg: mode("white", "gray.800")(props),
+        transition: "background-color 0.2s",
+        lineHeight: "base",
+        touchAction: "manipulation",
+      },
+      "*::placeholder": {
+        color: mode("gray.400", "whiteAlpha.400")(props),
+      },
+    }),
+  },
   components: {
     Button: {
       variants: {

@@ -66,7 +66,14 @@ const Services = (props) => {
           // pointerEvents: "none",
         }}
       >
-        <Box />
+        <Box
+          id="services"
+          h={0}
+          w="100%"
+          position="absolute"
+          left={0}
+          top="-160px"
+        />
         <CompContainer
           as={Stack}
           spacing={16}

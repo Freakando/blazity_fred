@@ -1,18 +1,21 @@
-import { Flex } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 
 const CompContainer = (props) => {
   return (
-    <Flex
+    <Box
       maxWidth="98em"
       width="100%"
       mx="auto"
-      px={8}
+      sx={{
+        "@media (max-width: 1075px) and (min-width: 62em)": {
+          px: 20,
+        },
+      }}
+      px={{ base: 4, md: 8, lg: 32 }}
       {...props}
-      // align="${(props) => props.alignItems}"
-      // justify="${(props) => props.justifyContent};"
     >
       {props.children}
-    </Flex>
+    </Box>
   );
 };
 
