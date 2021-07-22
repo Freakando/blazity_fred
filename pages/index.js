@@ -6,7 +6,7 @@ import Services from "../modules/Services";
 import RealMVP from "../modules/RealMVP";
 // import Nav from "../modules/Nav";
 import AboutUs from "../modules/AboutUs";
-import Portfolio from "./Portfolio";
+import Portfolio from "../modules/Portfolio";
 import WhyUs from "../modules/WhyUs";
 import Contact from "../modules/Contact";
 import VisitUs from "../modules/VisitUs";

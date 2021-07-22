@@ -30,6 +30,7 @@ const extendedTheme = {
           textColor: "white",
           _hover: {
             background: "#8a3200",
+            textDecoration: "none",
           },
           _active: {
             border: "none",

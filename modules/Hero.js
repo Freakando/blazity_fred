@@ -1,5 +1,5 @@
 import AppContainer from "../components/AppContainer";
-// import Button from "../components/Button";
+
 import { ThemeSubTitle } from "../components/HeroSection.style";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
 import CompContainer from "../components/CompContainer";

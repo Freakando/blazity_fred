@@ -4,8 +4,8 @@ import { useColorMode, useColorModeValue } from "@chakra-ui/color-mode";
 import { Box } from "@chakra-ui/layout";
 import { transparentize, darken } from "@chakra-ui/theme-tools";
 import React from "react";
-import MoonIcon from "./icons/MoonIcon";
-import SunIcon from "./icons/SunIcon";
+import MoonIcon from "./MoonIcon";
+import SunIcon from "./SunIcon";
 
 export default function ColorModeSwitcher({ ...boxProps }) {
   const { colorMode, toggleColorMode } = useColorMode();
